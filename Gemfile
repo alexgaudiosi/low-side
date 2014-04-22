@@ -31,9 +31,12 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'bootstrap-sass'
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk'
 

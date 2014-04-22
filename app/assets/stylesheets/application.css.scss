@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap';
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+body {
+	background-image: url('http://wonderfulengineering.com/wp-content/uploads/2013/12/bike-wallpaper-8.jpg');
+}
+
+header {
+	background-color: black;
+	height: 100px;
+	color: white;
+	text-align: center;
+	box-shadow: 5px 5px 5px #888888;
+
+	h1 {
+		margin: 0;
+		text-shadow: 0px 2px 3px #555;
+	}
+}
+
+#topbar {
+	width: 100%;
+	background-color: red;
+	height: 25px;
+}
+
+
+
+#logo {
+	width: 30%;
+}
+
+#head-left {
+	width: 50%;
+/*	background-color: yellow;
+*/	height: 50px;
+	float: left;
+}
+
+#head-right {
+	width: 50%;
+/*	background-color: green;
+*/	height: 50px;
+	float: right;
+}
+
+.middle {
+	margin-top: 20px;
+	width: 50%;
+	height: 300px;
+	border-radius: 15px;
+	background-image: url('http://www.webtexture.net/wp-content/gallery/20-seamless-paper-texture/papar_texture_thumb04.jpg');
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.col-md-4 {
+	margin-top: 10px;
+}
+
+#form {
+	float: left;
+	width: 40%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#form-pic {
+	display: inline;
+	float: right;
+	margin-right: 20px;
+	margin-top: 60px;
+
+	img {
+		border-radius: 10px;
+		width: 300px;
+		box-shadow: 5px 5px 5px #888888;
+	}
+}

@@ -5,11 +5,11 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @Item = Item.new
+    @item = Item.new
   end
 
   def create
-    @Item = Item.new params[:Item].permit(:description, :picture)
+    @Item = Item.new params[:item].permit(:description, :picture, :price)
 
     if @Item.save
       redirect_to '/items'
@@ -18,13 +18,21 @@ class ItemsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @Item = Item.find params[:id]
-  #   @Item.destroy
+  def destroy
+    @Item = Item.find params[:id]
+    @Item.destroy
 
-  #   flash[:notice] = 'Item successfully deleted.'
+    flash[:notice] = 'Item successfully deleted.'
 
-  #   redirect_to '/items'
-  # end
+    redirect_to '/items'
+  end
+
+  def show
+    @item = Item.find params[:id]
+  end
+
+  def item_params
+    params[:item].permit(:description, :price, :picture)
+  end
 
 end

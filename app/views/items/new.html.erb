@@ -1,0 +1,31 @@
+<div class="middle center">
+	<div id="form">
+		<% if @item.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+				<ul>
+				<% @item.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<%= form_for @item, html: { multipart: true } do |f| %>
+			<p><%= f.label :description %></p>
+			<%= f.text_area :description %>
+
+			<p><%= f.label :picture %>
+			<%= f.file_field :picture %></p>
+
+			<%= f.label :price %>
+			<p><%= f.text_field :price %></p>
+
+			<p><%= f.submit %></p>
+		<% end %>
+	</div>
+	<div id="form-pic">
+		<img src="http://crispme.com/wp-content/uploads/Motorcyle-and-Bikes-11.jpg?pass">
+	</div>
+</div>

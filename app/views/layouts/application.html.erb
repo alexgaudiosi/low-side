@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ECommerceSite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<header>
-		<div id="top-bar">
-			<div id="head-left">
+	<head>
+	  <title>LowSide</title>
+	  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header>
+			<div id="top-bar center">
+				<div id="logo center">
+					<h1>LowSide</h1>
+				</div>
+				<div id="head-left">
+					<p><%= link_to 'Home', '/items', class: 'btn btn-primary' %>
+	     		<%= link_to 'New Item', '/items/new', class: 'btn btn-primary' %></p>  
+				</div>
+				<div id="head-right">
+				</div>
 			</div>
-			<div id="head-right">
-			</div>
-		</div>
-	</header>
-
-<%= yield %>
-
-</body>
+		</header>
+	<%= yield %>
+	</body>
 </html>
